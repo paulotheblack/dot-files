@@ -200,10 +200,10 @@ gaps outer 0
 # 		    Autostart scripts:			#
 # ----------------------------------------------------- #
 # Feh
-exec_always --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/cyborg_girl_4k.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/sky.png
 
 # Pywal 
-# exec_always --no-startup-id wal -i /home/mpbw/Pictures/Wallpapers/cyborg_girl_4k.jpg
+# exec_always --no-startup-id wal -i $HOME/Pictures/Wallpapers/cyborg_girl_4k.jpg
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

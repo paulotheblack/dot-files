@@ -200,7 +200,7 @@ gaps outer 0
 # 		    Autostart scripts:			#
 # ----------------------------------------------------- #
 # Feh
-exec_always --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/sky.png
+exec_always --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/cyborg_girl_4k.jpg
 
 # Pywal 
 # exec_always --no-startup-id wal -i $HOME/Pictures/Wallpapers/cyborg_girl_4k.jpg

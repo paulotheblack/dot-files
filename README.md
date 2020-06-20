@@ -2,7 +2,7 @@
 
 **Bar:**  [Polybar](https://github.com/polybar/polybar)
 
-**Spotify module** [Jvanrhijn/polybar-spotify](https://github.com/Jvanrhijn/polybar-spotify)
+**Spotify module:** [Jvanrhijn/polybar-spotify](https://github.com/Jvanrhijn/polybar-spotify)
 
 **Icons:** [FontAwesome 5](https://fontawesome.com/)
 
@@ -12,6 +12,6 @@
 
 **Shell:** [Oh-My-Fish](https://github.com/oh-my-fish/oh-my-fish)
 
-**Application Launcher** [Rofi](https://github.com/davatorium/rofi)
+**Application Launcher:** [Rofi](https://github.com/davatorium/rofi)
 
 ![](https://raw.githubusercontent.com/paulotheblack/dot-files/master/pics/2020-06-20.png)

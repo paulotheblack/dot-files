@@ -1,5 +1,7 @@
-# mpbw's i3 config file
-# DOCS https://i3wm.org/docs/userguide.html 
+# ----------------------------------------------------- #
+# 		  mpbw's i3 config file 		#
+#           https://i3wm.org/docs/userguide.html        # 
+# ----------------------------------------------------- #
 
 # -- ALT --
 set $mod Mod1

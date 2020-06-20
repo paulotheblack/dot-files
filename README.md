@@ -6,4 +6,4 @@ file manager = **ranger**
 
 terminal emulator = **alacritty**
 
-[](/pics/2020-06-20.png)
+![](https://raw.githubusercontent.com/paulotheblack/dot-files/master/pics/2020-06-20.png)

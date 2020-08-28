@@ -175,6 +175,10 @@ gaps outer 0
 # terminal
 bindsym $mod+Return exec alacritty
 
+# terminal floating mode #? NOT WORKING
+#for_window [title="floating"] floating enable
+#bindysm $mod+Shift+Return exec alacritty -e floating
+
 # rofi (a program launcher)
 bindsym $mod+d exec rofi -modi drun -show drun -font "DejaVu Sans 14"  -show-icons
 

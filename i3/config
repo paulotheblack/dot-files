@@ -232,6 +232,10 @@ for_window [class="jetbrains-toolbox"] floating enable
 # Stacer
 for_window [class="stacer"] floating enable
 
+# Discord
+assign [class="discord"] $ws1
+for_window [class="discord"] floating enable
+
 # ----------------------------------------------------- #
 # 	               mpbw EOF				#
 # ----------------------------------------------------- #

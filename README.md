@@ -10,8 +10,8 @@
 
 **Terminal Emulator:** [Alacritty](https://github.com/alacritty/alacritty)
 
-**Shell:** [Oh-My-Fish](https://github.com/oh-my-fish/oh-my-fish)
-
 **Application Launcher:** [Rofi](https://github.com/davatorium/rofi)
+
+**Picture not updated YET** Nov 2020
 
 ![](https://raw.githubusercontent.com/paulotheblack/dot-files/master/pics/2020-06-20.png)

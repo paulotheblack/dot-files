@@ -163,11 +163,20 @@ bindsym $mod+r mode "resize"
 # 		        i3gaps      			#
 # ----------------------------------------------------- #
 # i3-gaps border size
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 2
 
 # i3-gaps gaps size
-gaps inner 7 
+gaps inner 5
 gaps outer 0
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4DB6AC #285577 #ffffff #2e9ef4   #4DB6AC
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
 
 # ----------------------------------------------------- #
 # 		      bindsym apps    			#
@@ -175,18 +184,14 @@ gaps outer 0
 # terminal
 bindsym $mod+Return exec alacritty
 
-# terminal floating mode #? NOT WORKING
-#for_window [title="floating"] floating enable
-#bindysm $mod+Shift+Return exec alacritty -e floating
-
-# rofi (a program launcher)
-bindsym $mod+d exec rofi -modi drun -show drun -font "DejaVu Sans 14"  -show-icons
+# rofi
+bindsym $mod+d exec rofi -modi drun -show drun -font "Fira Code 18"  -show-icons
 
 # ----------------------------------------------------- #
 # 		    Autostart scripts:			#
 # ----------------------------------------------------- #
 # Feh
-exec_always --no-startup-id feh --bg-scale --randomize $HOME/Pictures/Wallpapers/*
+exec_always --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/new/pcmac.jpg
 
 # Pywal 
 # exec_always --no-startup-id wal -i $HOME/Pictures/Wallpapers/cyborg_girl_4k.jpg
@@ -209,9 +214,6 @@ exec_always --no-startup-id picom &
 # ----------------------------------------------------- #
 # to find out WM_CLASS(STRING): $~ xprop | grep CLASS
 
-# Firefox #? NOT USEFUL
-# assign [class="Firefox"] $ws2
-
 # Spotify #? NOT WORKING
 for_window [class="Spotify"] $ws5
 
@@ -220,8 +222,8 @@ assign [class="Telegram"] $ws1
 for_window [class="Telegram"] floating enable
 
 # Signal
-assign [class="Signal"] $ws1
-for_window [class="Signal"] floating enable
+# assign [class="Signal"] $ws1
+# for_window [class="Signal"] floating enable
 
 # Gnome-calculator
 for_window [class="Gnome-calculator"] floating enable
@@ -236,6 +238,17 @@ for_window [class="stacer"] floating enable
 assign [class="discord"] $ws1
 for_window [class="discord"] floating enable
 
+# Transmission
+for_window [class="Transmission"] floating enable
+
+# Oracle VirtualBox
+for_window [class="VirtualBox Manager"] floating enable
+
+# PCmanFM
+for_window [class="pcmanfm"] floating enable
+
+# Mozzila Thunderbird
+for_window [class="Thunderbird"] floating enable
 # ----------------------------------------------------- #
 # 	               mpbw EOF				#
 # ----------------------------------------------------- #

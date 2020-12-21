@@ -184,14 +184,17 @@ client.background       #ffffff
 # terminal
 bindsym $mod+Return exec alacritty
 
-# rofi
+# rofi drun
 bindsym $mod+d exec rofi -modi drun -show drun -font "Fira Code 18"  -show-icons
+
+# rofi window switch
+bindsym $mod+Tab exec rofi -show window -font "Fira Code 18"
 
 # ----------------------------------------------------- #
 # 		    Autostart scripts:			#
 # ----------------------------------------------------- #
 # Feh
-exec_always --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/new/pcmac.jpg
+exec_always --no-startup-id feh --bg-scale --randomize $HOME/Pictures/Wallpapers/current/*
 
 # Pywal 
 # exec_always --no-startup-id wal -i $HOME/Pictures/Wallpapers/cyborg_girl_4k.jpg
@@ -208,6 +211,9 @@ exec_always --no-startup-id picom &
 
 # NetworkManager tray icon
 # exec --no-startup-id nm-applet
+
+# Xfce4-Clipman
+# exec xfce4-clipman
 
 # ----------------------------------------------------- #
 # 	   Apps on start on certain workspaces		#

@@ -1,0 +1,3 @@
+configuration {
+	theme: "$HOME/.config/rofi/themes/onedark.rasi";
+}

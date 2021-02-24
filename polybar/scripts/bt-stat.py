@@ -13,9 +13,13 @@ class BTdevice():
         return self.name, self.mac
 
 
-bt_devices = {BTdevice(name='XM3', mac='38:18:4C:E9:B5:47')}
+bt_devices = {
+    BTdevice(name='XM3', mac='38:18:4C:E9:B5:47'),
+    BTdevice(name='K380', mac='20:03:04:28:60:13')
+    }
 
 if which("bluetoothctl") is not None:
+    connected_devices = ''
     bt_connected = "no"
     for dev in bt_devices:
         name, mac = dev.getProperties()
@@ -23,8 +27,10 @@ if which("bluetoothctl") is not None:
         t = subprocess.Popen([cmd_bt_connected], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
         bt_connected = t.stdout.read().decode('utf-8').strip('\n')
         if bt_connected == "yes":
-            print(name)
-            break
+            connected_devices += name + ' '
+
+    print(connected_devices)
+
     if bt_connected == "no":
         print("0")
 else:

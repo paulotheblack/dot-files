@@ -193,8 +193,11 @@ bindsym $mod+Tab exec rofi -show window -font "Fira Code 18"
 # ----------------------------------------------------- #
 # 		    Autostart scripts:			#
 # ----------------------------------------------------- #
+# set keyboard layouts
+exec_always "setxkbmap -model pc105 -layout us,sk -variant ,qwerty"
+
 # Feh
-exec_always --no-startup-id feh --bg-scale --randomize $HOME/Pictures/Wallpapers/current/*
+exec_always --no-startup-id feh --bg-scale --randomize $HOME/Pictures/Wallpapers/*
 
 # Pywal 
 # exec_always --no-startup-id wal -i $HOME/Pictures/Wallpapers/cyborg_girl_4k.jpg

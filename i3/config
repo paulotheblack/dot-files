@@ -1,5 +1,5 @@
 # ----------------------------------------------------- #
-# 		  mpbw's i3 config file 		#
+# 		 @mpbw's i3 config file 		#
 #           https://i3wm.org/docs/userguide.html        # 
 # ----------------------------------------------------- #
 
@@ -106,9 +106,9 @@ set $ws1 "msg"
 set $ws2 "www"
 set $ws3 ">_"
 set $ws4 "$_"
-set $ws5 "a/v"
-set $ws6 "gg"
-set $ws7 "7"
+set $ws5 "wrk"
+set $ws6 "a/v"
+set $ws7 "gg"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -119,17 +119,18 @@ set $ws10 "10"
 set $firstMonitor eDP1
 set $secondMonitor HDMI1
 
-workspace $ws1 output $firstMonitor
-workspace $ws2 output $firstMonitor
-workspace $ws3 output $firstMonitor
-workspace $ws4 output $firstMonitor
 workspace $ws5 output $firstMonitor
 workspace $ws6 output $firstMonitor
+workspace $ws7 output $firstMonitor
+workspace $ws8 output $firstMonitor
+workspace $ws9 output $firstMonitor
+workspace $ws10 output $firstMonitor
 
-workspace $ws7 output $secondMonitor
-workspace $ws8 output $secondMonitor
-workspace $ws9 output $secondMonitor
-workspace $ws10 output $secondMonitor
+workspace $ws1 output $secondMonitor
+workspace $ws2 output $secondMonitor
+workspace $ws3 output $secondMonitor
+workspace $ws4 output $secondMonitor
+
 
 # ----------------------------------------------------- #
 # 		        i3 Utills    			#
@@ -188,19 +189,16 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+d exec rofi -modi drun -show drun -font "Fira Code 18"  -show-icons
 
 # rofi window switch
-bindsym $mod+Tab exec rofi -show window -font "Fira Code 18"
+# bindsym $mod+Tab exec rofi -show window -font "Fira Code 18"
 
 # ----------------------------------------------------- #
 # 		    Autostart scripts:			#
 # ----------------------------------------------------- #
 # set keyboard layouts
-exec_always "setxkbmap -model pc105 -layout us,sk -variant ,qwerty"
+exec "setxkbmap -model pc105 -layout us,sk -variant ,qwerty"
 
 # Feh
-exec_always --no-startup-id feh --bg-scale --randomize $HOME/Pictures/Wallpapers/*
-
-# Pywal 
-# exec_always --no-startup-id wal -i $HOME/Pictures/Wallpapers/cyborg_girl_4k.jpg
+exec_always --no-startup-id feh --bg-scale --randomize $HOME/Pictures/Wallpapers/current/*
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -208,15 +206,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Picom
 exec_always --no-startup-id picom &
 
-# Redshift - f.lux alternative
-# exec --no-startup-id redshift -l 48.71395:21.25808
-# exec --no-startup-id redshift-gtk
-
-# NetworkManager tray icon
-# exec --no-startup-id nm-applet
-
-# Xfce4-Clipman
-# exec xfce4-clipman
+# f.lux -48.71395 -d 21.25808
+exec_always killall -q fluxgui
+exec_always --no-startup-id fluxgui &
 
 # ----------------------------------------------------- #
 # 	   Apps on start on certain workspaces		#
@@ -224,11 +216,11 @@ exec_always --no-startup-id picom &
 # to find out WM_CLASS(STRING): $~ xprop | grep CLASS
 
 # Spotify #? NOT WORKING
-for_window [class="Spotify"] $ws5
+# for_window [class="Spotify"] $ws5
 
 # Telegram
 assign [class="Telegram"] $ws1
-for_window [class="Telegram"] floating enable
+# for_window [class="Telegram"] floating enable
 
 # Signal
 # assign [class="Signal"] $ws1
@@ -241,23 +233,31 @@ for_window [class="Gnome-calculator"] floating enable
 for_window [class="jetbrains-toolbox"] floating enable
 
 # Stacer
-for_window [class="stacer"] floating enable
+# for_window [class="stacer"] floating enable
 
 # Discord
-assign [class="discord"] $ws1
-for_window [class="discord"] floating enable
+# assign [class="discord"] $ws1
 
 # Transmission
 for_window [class="Transmission"] floating enable
 
 # Oracle VirtualBox
-for_window [class="VirtualBox Manager"] floating enable
+# for_window [class="VirtualBox Manager"] floating enable
 
 # PCmanFM
-for_window [class="pcmanfm"] floating enable
+# for_window [class="pcmanfm"] floating enable
 
 # Mozzila Thunderbird
-for_window [class="Thunderbird"] floating enable
+# for_window [class="Thunderbird"] floating enable
+
+# Python-TK
+for_window [class="Tk"] floating enable
+
+# File-roller
+for_window [class="File-roller"] floating enable
+
+# ProtonVPN
+for_window [class="protonvpn"] floating enable
 # ----------------------------------------------------- #
-# 	               mpbw EOF				#
+# 	               @mpbw EOF			#
 # ----------------------------------------------------- #

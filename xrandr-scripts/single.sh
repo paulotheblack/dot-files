@@ -1,1 +1,1 @@
-xrandr --output HDMI1 --auto --output eDP1 --off
+xrandr --output HDMI-1 --auto --output eDP-1 --off

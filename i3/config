@@ -116,8 +116,8 @@ set $ws10 "10"
 # ----------------------------------------------------- #
 # 		   Dual-screen setup			#
 # ----------------------------------------------------- #
-set $firstMonitor eDP1
-set $secondMonitor HDMI1
+set $firstMonitor eDP-1
+set $secondMonitor HDMI-1
 
 workspace $ws5 output $firstMonitor
 workspace $ws6 output $firstMonitor
@@ -206,9 +206,12 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Picom
 exec_always --no-startup-id picom &
 
-# f.lux -48.71395 -d 21.25808
-exec_always killall -q fluxgui
-exec_always --no-startup-id fluxgui &
+# f.lux LAT: -48.71395  LONG: -d 21.25808
+# exec_always killall -q fluxgui
+# exec_always --no-startup-id fluxgui &a
+# redshift
+exec_always killall -q redshift
+exec_always --no-startup-id redshift-gtk -l 48.71:21.25 -t 6500:3600 -m randr -v 
 
 # ----------------------------------------------------- #
 # 	   Apps on start on certain workspaces		#

@@ -116,8 +116,8 @@ set $ws10 "10"
 # ----------------------------------------------------- #
 # 		   Dual-screen setup			#
 # ----------------------------------------------------- #
-set $firstMonitor eDP-1
-set $secondMonitor HDMI-1
+set $firstMonitor eDP1
+set $secondMonitor HDMI1
 
 workspace $ws5 output $firstMonitor
 workspace $ws6 output $firstMonitor
@@ -206,23 +206,52 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Picom
 exec_always --no-startup-id picom &
 
+# f.lux LAT: -48.71395  LONG: -d 21.25808
+# exec_always killall -q fluxgui
+# exec_always --no-startup-id fluxgui &a
 # redshift
 exec_always killall -q redshift
-exec_always --no-startup-id redshift-gtk -l 48.71:21.25 -t 6500:3600 -m randr -v 
+exec_always --no-startup-id redshift-gtk -l 48.71:21.25 -t 6500:3200 -m randr -v 
 
 # ----------------------------------------------------- #
 # 	   Apps on start on certain workspaces		#
 # ----------------------------------------------------- #
 # to find out WM_CLASS(STRING): $~ xprop | grep CLASS
 
+# Spotify #? NOT WORKING
+# for_window [class="Spotify"] $ws5
+
 # Telegram
 assign [class="Telegram"] $ws1
+# for_window [class="Telegram"] floating enable
+
+# Signal
+# assign [class="Signal"] $ws1
+# for_window [class="Signal"] floating enable
+
+# Gnome-calculator
+for_window [class="Gnome-calculator"] floating enable
 
 # Jetbrains Toolbox
 for_window [class="jetbrains-toolbox"] floating enable
 
+# Stacer
+# for_window [class="stacer"] floating enable
+
+# Discord
+# assign [class="discord"] $ws1
+
 # Transmission
 for_window [class="Transmission"] floating enable
+
+# Oracle VirtualBox
+# for_window [class="VirtualBox Manager"] floating enable
+
+# PCmanFM
+# for_window [class="pcmanfm"] floating enable
+
+# Mozzila Thunderbird
+# for_window [class="Thunderbird"] floating enable
 
 # Python-TK
 for_window [class="Tk"] floating enable

@@ -1,4 +1,23 @@
-polybar/source/*
-polybar/deprecated_modules/*
-polybar/fonts/*
-polybar/outdate-config.ini
+/*
+
+# tracked
+!/.gitignore
+!/.zshrc
+!/alacritty
+!/gtk-3.0
+!/i3
+!/pcmanfm
+!/picom
+!/pics
+!/rofi
+
+# polybar
+!/polybar/config.ini
+!/polybar/launch.sh
+!/polybar/modules/*
+!/polybar/fonts/*
+
+# xrandr-scripts
+!/double.sh
+!/single.sh
+!/csgo.sh

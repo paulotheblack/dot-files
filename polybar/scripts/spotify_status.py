@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# @author:  Jvanrhijn
+# @url:     https://github.com/Jvanrhijn/polybar-spotify
+
 import sys
 import dbus
 import argparse

@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+# @author:  ecceman
+# @url:     https://github.com/ecceman/bt-stat
+
 import subprocess
 from shutil import which
 

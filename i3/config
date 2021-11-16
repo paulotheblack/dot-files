@@ -198,7 +198,7 @@ bindsym $mod+d exec rofi -modi drun -show drun -font "Fira Code 18"  -show-icons
 exec "setxkbmap -model pc105 -layout us,sk -variant ,qwerty"
 
 # Feh
-exec_always --no-startup-id feh --bg-scale --randomize $HOME/Pictures/Wallpapers/current/*
+exec_always --no-startup-id feh --bg-scale --randomize $HOME/.config/pics/wallpapers/*
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

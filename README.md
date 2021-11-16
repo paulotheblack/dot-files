@@ -15,3 +15,7 @@
 **Picture not updated YET** Nov 2020
 
 ![](https://raw.githubusercontent.com/paulotheblack/dot-files/master/pics/2020-06-20.png)
+
+---
+**TODO**
+- [ ] install script for basic SW suite

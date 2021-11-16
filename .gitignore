@@ -3,6 +3,7 @@
 # tracked
 !/.gitignore
 !/.zshrc
+!/default.pa.custom
 !/alacritty
 !/gtk-3.0
 !/i3

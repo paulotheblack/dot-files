@@ -170,7 +170,7 @@ for_window [class=".*"] border pixel 2
 gaps inner 5
 gaps outer 0
 
-###
+### OG border colors
 #  class                 border  backgr. text    indicator child_border
 # client.focused          #4DB6AC #285577 #ffffff #2e9ef4   #4DB6AC
 # client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
@@ -178,22 +178,24 @@ gaps outer 0
 # client.urgent           #2f343a #900000 #ffffff #900000   #900000
 # client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # client.background       #ffffff
-###
-
-
+### NEW border colors <- pywal; EOF
 
 # ----------------------------------------------------- #
 # 		      bindsym apps    			#
 # ----------------------------------------------------- #
-# terminal
+# Alacritty
 bindsym $mod+Return exec alacritty
 
-# rofi drun
-bindsym $mod+d exec rofi -modi drun -show drun -font "Fira Code 18"  -show-icons
+# Rofi drun
+bindsym $mod+d exec rofi -modi drun -show drun -font "Fira Code 18"  -show-icons &
 
-# rofi window switch
+# Rofi window switch
 #bindsym $mod+Tab exec rofi -show window -font "Fira Code 18" -show-icons
 
+# Rofi WiFi ( https://github.com/vlfldr/rofi-wifi-menu )
+bindsym $mod+Shift+w exec $HOME/.config/rofi/rofi-wifi-menu.sh &
+
+# Dunst && Pywal - reload
 bindsym $mod+Shift+u exec wal -i $HOME/.config/pics/wallpapers -o "$HOME/.config/dunst/launch_dunst.sh"
 
 # ----------------------------------------------------- #
@@ -202,7 +204,7 @@ bindsym $mod+Shift+u exec wal -i $HOME/.config/pics/wallpapers -o "$HOME/.config
 # set keyboard layouts
 exec "setxkbmap -model pc105 -layout us,sk -variant ,qwerty"
 
-# Feh
+# Feh - deprecated ( pywal )
 # exec_always --no-startup-id feh --bg-scale --randomize $HOME/.config/pics/wallpapers/*
 
 # Polybar
@@ -211,54 +213,31 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Picom
 exec_always --no-startup-id picom &
 
-# redshift
+# Redshift
 exec_always killall -q redshift-gtk
 exec_always --no-startup-id redshift-gtk -l 48.71:21.25 -t 6500:3000 -m randr -v
 
-# pywal + dunst launch
+# Dunst && Pywal
 exec wal -i $HOME/.config/pics/wallpapers -o "$HOME/.config/dunst/launch_dunst.sh"
 
 # ----------------------------------------------------- #
 # 	   Apps on start on certain workspaces		#
 # ----------------------------------------------------- #
-# to find out WM_CLASS(STRING): $~ xprop | grep CLASS
-
-# Spotify #? NOT WORKING
-# for_window [class="Spotify"] $ws5
+# --help: to find out WM_CLASS(STRING): $~ xprop | grep CLASS
 
 # Telegram
 assign [class="Telegram"] $ws1
-# for_window [class="Telegram"] floating enable
 
-# Signal
-# assign [class="Signal"] $ws1
-# for_window [class="Signal"] floating enable
-
-# Gnome-calculator
+# Gnome-calculator ( native floating )
 for_window [class="Gnome-calculator"] floating enable
 
-# Jetbrains Toolbox
+# Jetbrains Toolbox ( native floating )
 for_window [class="jetbrains-toolbox"] floating enable
 
-# Stacer
-# for_window [class="stacer"] floating enable
-
-# Discord
-# assign [class="discord"] $ws1
-
-# Transmission
+# Transmission ( native floating )
 for_window [class="Transmission"] floating enable
 
-# Oracle VirtualBox
-# for_window [class="VirtualBox Manager"] floating enable
-
-# PCmanFM
-# for_window [class="pcmanfm"] floating enable
-
-# Mozzila Thunderbird
-# for_window [class="Thunderbird"] floating enable
-
-# Python-TK
+# Python-TK ( lecture purposes )
 for_window [class="Tk"] floating enable
 
 # File-roller
@@ -266,20 +245,24 @@ for_window [class="File-roller"] floating enable
 
 # ProtonVPN
 for_window [class="protonvpn"] floating enable
-# ----------------------------------------------------- #
-# 	               @mpbw EOF			#
-# ----------------------------------------------------- #
 
-
+# ----------------------------------------------------- #
+# 	                 Pywal    			#
+# ----------------------------------------------------- #
+# fetch resources
 set_from_resource $color0 i3wm.color0 #f0f0f0
 set_from_resource $color2 i3wm.color2 #4DB6AC
 set_from_resource $color7 i3wm.color7 #f0f0f0
 set_from_resource $color8 i3wm.color8 #f0f0f0
 
-
+# assign fetched colors ( TODO fix )
 # class                 border  backgr. text    indicator  child_border
 client.focused          #4DB6AC $color2 #FFFFFF #2E9EF4   #ff833a 
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
 client.unfocused        #333333 #color0 #888888 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+# ----------------------------------------------------- #
+# 	               @mpbw EOF			#
+# ----------------------------------------------------- #

@@ -11,6 +11,7 @@
 !/picom
 !/pics
 !/rofi
+!/layout
 
 # polybar
 !/polybar/config.ini

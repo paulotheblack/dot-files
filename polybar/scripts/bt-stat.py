@@ -2,6 +2,7 @@
 
 # @author:  ecceman
 # @url:     https://github.com/ecceman/bt-stat
+# @mod:     MAC's of personal devices
 
 import subprocess
 from shutil import which
@@ -18,7 +19,8 @@ class BTdevice():
 
 bt_devices = {
     BTdevice(name='XM3', mac='38:18:4C:E9:B5:47'),
-    BTdevice(name='K380', mac='20:03:04:28:60:13')
+    BTdevice(name='K380', mac='20:03:04:28:60:13'),
+    BTdevice(name='JBL-GO2', mac='04:CB:88:D0:6B:33')
     }
 
 if which("bluetoothctl") is not None:

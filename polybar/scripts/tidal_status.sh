@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# https://github.com/Mastermindzh
+# @author:  Mastermindzh
+# @url:     https://github.com/Mastermindzh/dotfiles/blob/master/i3/scripts/tidal-cli.sh
+# @mod:     none
 
 TIDAL_HOST="http://localhost:47836"
 

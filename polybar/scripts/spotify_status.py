@@ -2,6 +2,7 @@
 
 # @author:  Jvanrhijn
 # @url:     https://github.com/Jvanrhijn/polybar-spotify
+# @mod:     none
 
 import sys
 import dbus

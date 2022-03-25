@@ -12,14 +12,5 @@
 !/pics
 !/rofi
 !/layout
-
-# polybar
-!/polybar/config.ini
-!/polybar/launch.sh
-!/polybar/modules/*
-!/polybar/fonts/*
-
-# xrandr-scripts
-!/double.sh
-!/single.sh
-!/csgo.sh
+!/polybar
+!/zshrc_2022

@@ -116,8 +116,11 @@ set $ws10 "10"
 # ----------------------------------------------------- #
 # 		   Dual-screen setup			#
 # ----------------------------------------------------- #
-set $firstMonitor eDP1
-set $secondMonitor HDMI1
+#set $firstMonitor eDP1
+#set $secondMonitor HDMI1
+
+set $firstMonitor HDMI1
+set $secondMonitor eDP1
 
 workspace $ws5 output $firstMonitor
 workspace $ws6 output $firstMonitor

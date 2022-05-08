@@ -11,8 +11,8 @@ for tool in ${TOKILL[@]}; do
     fi
 done
 
-xrandr --output eDP1 --set 'scaling mode' 'Full'
-xrandr --output eDP1 --mode 800x600 --rate 60 --output HDMI1 --off
+xrandr --output eDP-1 --set 'scaling mode' 'Full'
+xrandr --output eDP-1 --mode 800x600 --rate 60 --output HDMI-1 --off
 
 echo "res 800x600 streched; 60Hz; ... glhf"
 

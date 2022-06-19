@@ -26,6 +26,12 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
+# for keyboard w0 dedicated XF86-multimedia keys
+bindsym $mod+Control+Prior exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $mod+Control+Next exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+Control+Home exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym $mod+Control+End exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
 # ----------------------------------------------------- #
 # 		     Windows managment			#
 # ----------------------------------------------------- #
@@ -118,8 +124,8 @@ set $ws10 "10"
 #set $firstMonitor eDP1
 #set $secondMonitor HDMI1
 
-set $firstMonitor HDMI-1
-set $secondMonitor eDP-1
+set $firstMonitor HDMI1
+set $secondMonitor eDP1
 
 workspace $ws5 output $firstMonitor
 workspace $ws6 output $firstMonitor
@@ -191,11 +197,16 @@ bindsym $mod+Return exec alacritty
 # Rofi drun
 bindsym $mod+d exec rofi -modi drun -show drun -font "Fira Code 18"  -show-icons &
 
+bindsym $mod+Shift+u exec feh --bg-scale --randomize $HOME/.config/pics/wallpapers/*
+
+# Polkit
+exec /usr/lib/polkit-1/polkit-agent-helper-1
+
 # Rofi window switch
 #bindsym $mod+Tab exec rofi -show window -font "Fira Code 18" -show-icons
 
 # Rofi wifi switch
-bindsym $mod+Shift+w exec $HOME/.config/rofi/rofi-wifi-menu.sh &
+# bindsym $mod+Shift+w exec $HOME/.config/rofi/rofi-wifi-menu.sh &
 
 # Dunst && Pywal - NOT INSTALLED RN
 # bindsym $mod+Shift+u exec wal -i $HOME/.config/pics/wallpapers -o "$HOME/.config/dunst/launch_dunst.sh"

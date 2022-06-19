@@ -1,0 +1,1 @@
++exec mpbw -novid -nojoy -d3d9ex -tickrate 64 -refresh 75

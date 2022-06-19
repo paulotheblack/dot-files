@@ -1,8 +1,13 @@
 #!/bin/sh
 
-echo "@mpbw CS:GO _eDP1"
-
-TOKILL=("telegram-desktop" "signal-desktop" "Discord" "firefox" "code-insiders" "redshift-gtk" "polybar" "picom")
+TOKILL=("telegram-desktop"
+       	"signal-desktop"
+       	"Discord"
+       	"firefox"
+       	"code-insiders"
+       	"redshift-gtk"
+       	"picom"
+	"polybar")
 
 for tool in ${TOKILL[@]}; do
     ret=$(killall "$tool")
@@ -11,11 +16,14 @@ for tool in ${TOKILL[@]}; do
     fi
 done
 
-xrandr --output eDP-1 --set 'scaling mode' 'Full'
-xrandr --output eDP-1 --mode 800x600 --rate 60 --output HDMI-1 --off
+# pause dunst
+killall -SIGUSR1 dunst
 
-echo "res 800x600 streched; 60Hz; ... glhf"
+# EDP1
+# xrandr --output eDP1 --mode 800x600 --rate 60 --output HDMI1 --off
 
+# HDMI1
+xrandr --output HDMI1 --mode 800x600  -r 75
 
-
-
+# DP1-3 ( dock, VGA - AcerBRQ )
+# xrandr --output DP1-3 --mode 800x600 -r 75
